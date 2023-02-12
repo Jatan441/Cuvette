@@ -4,14 +4,15 @@ body{
     box-sizing: border-box;
 }
 nav{
-/* position: absolute; */
-width: 100%;
-height: 100px;
+    position: fixed;
+    width: 100%;
+  
 
-margin:0px;
-background-color: #6F6AF7;
-display: flex;
-justify-content: space-between;
+    margin:auto;
+    background-color: #6F6AF7;
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
 }
 
 .logo{
@@ -35,7 +36,7 @@ justify-content: space-between;
 }
 
 .search{
-    position: relative;
+   position: relative;
     width: 200px;
     height: 30px;
 
@@ -69,59 +70,53 @@ input{
 
 
 
-img{
+.social img{
     width: 100%;
     height: 100%;
     object-fit:cover;
+    border: solid black 1px;
+    border-radius: 8px;
 }
 
-.social1{
-    top: 250px;
-    right: 0px;
-    position: fixed;
-    height: 40px;
+
+.social{
+    position: sticky;
+    top: 120px;
+    margin-top:25vh;
+    float: right;
+    padding-top: 6px;
+    padding: 8px;
     width: 40px;
-    border: solid black 2px;
-    border-radius: 5px;
-   
+
 }
-.social2{
-    top: 295px;
-    right: 0px;
-    position: fixed;
+
+.img{
     height: 40px;
     width: 40px;
-    border: solid black 2px;
-    border-radius: 5px;
-   
-}
-.social3{
-    top: 340px;
-    right: 0px;
-    position: fixed;
-    height: 40px;
-    width: 40px;
-    border: solid black 2px;
-    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin: 1px;
+    border-image: 2px;
+    border-image-width: 4px;
+    
 }
 
 
 section{
-    margin: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
     display: flex;
     justify-content: space-around;
 }
 .img{
-    position: relative;
     width: 380px;
     height: 450px;
-   
     background: url("image 4.png");
     border-radius: 20px;
 }
 
 .div-text{
-    position: relative;
     width: 770px;
     height: 450px;
 
@@ -131,7 +126,7 @@ section{
     border-radius: 20px;
 }
 
-p{
+.div-text p{
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -142,6 +137,7 @@ p{
 }
 
  .sec2{
+    margin: 50px;
     display: flex;
     gap: 30px;
 }
@@ -150,7 +146,7 @@ p{
 .sec2-div1{
    
 
-    position: relative;
+   
     width: 300px;
     height: 100px;
   
@@ -161,7 +157,7 @@ p{
 }
 
 .sec2-div2{
-    position: relative;
+   
     width: 300px;
     height: 100px;
 
@@ -174,7 +170,7 @@ p{
 .sec2-div3{
 
    
-    position: relative;
+   
     width: 300px;
     height: 100px;
   
@@ -183,7 +179,7 @@ p{
     border-radius: 11px;
 }
 .sec2-div4{
-    position: relative;
+   
     width: 300px;
     height: 100px;
 
@@ -228,6 +224,7 @@ p{
     display: flex;
     justify-content: space-around;
     gap: 30px;
+    margin: 50px;
 }
 
 .sec3-div1{
@@ -239,7 +236,7 @@ p{
 
 .sec3-div1-div1{
     box-sizing: border-box;
-    position: relative;
+   
     width: 397px;
     height: 100px;
     text-align: center;
@@ -252,7 +249,7 @@ p{
 }
 .sec3-div1-div2{
     box-sizing: border-box;
-    position: relative;
+   
     width: 397px;
     height: 100px;
     text-align: center;
@@ -265,7 +262,7 @@ p{
     }
 .sec3-div1-div3{
     box-sizing: border-box;
-    position: relative;
+   
     width: 397px;
     height: 100px;
     text-align: center;
@@ -328,7 +325,7 @@ td{
 }
 
 .btn{
-    position: relative;
+   
     height: 40px;
     width: 100px;
     float: right;
