@@ -1,0 +1,50 @@
+<style>
+
+body{
+  text-align:center;
+	
+}
+span{
+	background:lightblue;
+	padding:10px;
+	
+
+}
+
+button{
+	background:blue;
+	color : white;
+	padding: 10px;
+	outline: none;
+	border-radius:5px;	
+}
+</style>
+
+<br><span>0</span><br><br>
+<button onclick=inc()>Increment</button>
+<button onclick=dec()>Decrement</button>
+<button onclick=reset()>Reset</button>
+
+<script>
+var count = 0
+function inc(){
+  var i = document.getElementsByTagName('span')
+  count++
+  i[0].innerHTML = count ;
+  
+}
+
+function reset(){
+  var i =document.getElementsByTagName('span')
+  count =0;
+  i[0].innerHTML = count;
+}
+
+function dec(){
+  var i = document.getElementsByTagName('span')
+  count--
+  i[0].innerHTML = count ;
+  
+}
+
+</script>
