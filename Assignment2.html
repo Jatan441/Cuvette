@@ -42,7 +42,13 @@ function reset(){
 
 function dec(){
   var i = document.getElementsByTagName('span')
-  count--
+//  count==0 ? count = 0 : count = count--;
+  if (count==0) {
+    count=0
+  }
+  else{
+  count--;
+  }
   i[0].innerHTML = count ;
   
 }
