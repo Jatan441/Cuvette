@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<body class="containerr">
+
+    <section class="game">
+
+       <!-- Score ------------------------------------------------------------------------ -->  
+    <div class="score-section">
+      <div class="score-sec-text">
+          <span>Rock</span>
+          <span>Paper</span>
+          <span>Scissors</span>
+      </div>
+
+      <div class="score-box">
+          <div class="score">
+              <p class="text-score">Your</p>
+              <p class="text-score">Score</p>
+              <p class="num-score" id="pscore">0</p>
+          </div>
+          <div class="computer-score">
+              <p class="text-score">Computer</p>
+              <p class="text-score">Score</p>
+              <p class="num-score" id="cscore">0</p>
+          </div>
+      </div>
+
+    </div>
+     <!-- Score end------------------------------------------------------------------------ -->
+
+     <!-- Home------------------------------------------------------------------------ -->
+    <div class="home">
+            <div class="align-buttons">
+              
+                <div class="button button-border-blue rock" >
+                    <div class="button-inside">
+                        <img src="rock.png" alt=""id="rockIcon" >
+                    </div>
+                    rock
+              </div>
+             
+              <div class="straight-line">
+                  <img src="Line 1.png" alt="" height="16px">
+              </div>
+
+
+              <div class="button button-border-pink scissor">
+                <div class="button-inside">
+                    <img src="scissor.png" alt=""  id="scissorIcon">
+                </div>
+                scissor
+                </div>
+
+            </div>
+
+            <div class="lines">
+                <img src="Line 3.png" alt="">
+                <img src="Line 2.png" alt="" >  
+            </div>
+
+            <div class="button button-border-yellow center paper" >
+                <div class="button-inside">
+                    <img src="paper.png" alt=""id="paperIcon">
+                </div>
+                paper
+             </div>
+
+             <div class="rules" data-toggle="modal" data-target="#exampleModal">
+                Rules
+             </div>
+             
+            </div>
+    <!-- Home end------------------------------------------------------------------------ -->   
+
+    <!-- Lost Section -------------------------------------------------------------------- -->
+    <div class="lost">
+
+        <div class="picked">
+            <p>You Picked</p>
+            <p>PC Picked</p>
+        </div>
+
+        <div class="lost-buttons">
+            
+            <div class="button button-border-yellow col-align">
+                <div class="button-inside">
+                    <img src="paper.png" alt="">
+                </div>
+             </div>
+
+             <div>
+                <p id="you-lost">you lost</p>
+                <p id="against-pc">Against pc</p>
+                <button class="play-again-btn" id="replayBtnFromLost" > Play Again</button>
+             </div>
+
+             <div class="btn-highlight-l1">
+                <div class="btn-highlight-l2">
+                    <div class="btn-highlight-l3">
+                        <div class="button button-border-pink pos">
+                            <div class="button-inside">
+                                <img src="scissor.png" alt="">
+                            </div>
+                            </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+        <div class="rules" data-toggle="modal" data-target="#exampleModal">
+            Rules
+         </div>
+    </div>
+    <!-- Lost end------------------------------------------------------------------------------------------ -->
+
+    
+    <!-- Win Section -------------------------------------------------------------------- -->
+    <div class="win">
+
+        <div class="picked">
+            <p>You Picked</p>
+            <p>PC Picked</p>
+        </div>
+
+        <div class="lost-buttons">
+            
+            <div class="btn-highlight-l1">
+                <div class="btn-highlight-l2">
+                    <div class="btn-highlight-l3">
+                        <div class="button button-border-pink pos winBtn1">
+                            <div class="button-inside win-ins1" >
+                                <img src="scissor.png" alt="">
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+             <div>
+                <p id="you-lost">you win</p>
+                <p id="against-pc">Against pc</p>
+                <button class="play-again-btn" id="replayBtnFromWin"> Play Again</button>
+             </div>
+
+             <div class="button button-border-yellow col-align-win winBtn2">
+                <div class="button-inside win-ins2">
+                    <img src="paper.png" alt="">
+                </div>
+             </div>
+
+            
+        </div>
+        <div class="rules" id="next">
+            Next
+         </div>
+        <div class="rules" data-toggle="modal" data-target="#exampleModal">
+            Rules
+         </div>
+    </div>
+    <!-- Win end------------------------------------------------------------------------------------------ -->
+
+    
+
+    <!-- Tie UP------------------------------------------------------------------------ -->
+    <div class="tie">
+        <div class="picked">
+            <p>You Picked</p>
+            <p>PC Picked</p>
+        </div>
+
+        <div class="tie-buttons">
+                    
+                    <div class="button button-border-blue tieBtn1">
+                        <div class="button-inside ins1">
+                            <img src="rock.png" alt="" >
+                        </div>
+                </div>
+            
+
+             <div>
+                <p id="you-lost">Tie Up</p>
+                <button class="play-again-btn" id="replayBtnFromTie">Replay</button>
+             </div>
+
+             
+                    <div class="button button-border-blue tieBtn2">
+                        <div class="button-inside ins2">
+                            <img src="rock.png" alt="">
+                        </div>
+                </div>
+                
+            </div>
+            
+        <div class="rules" data-toggle="modal" data-target="#exampleModal">
+            Rules
+         </div>
+    </div>
+    <!-- Tie UP End------------------------------------------------------------------------ -->
+
+</section>
+
+<Section class="hurray">
+
+    <div class="tropy-star">
+
+        <div class="star1">
+        <img src="Star.png"  alt="">
+        </div>
+        <div class="trophy">
+        <img src="tropy.png" alt="">
+        </div>
+
+        <div class="star2">
+            <img src="Star.png"  alt="">
+        </div>
+       
+    </div>
+
+    <div class="hurray-text">
+        <p class="hurray-txt">Hurray!!</p>
+        <p class="won-game">You won the game</p>
+    </div>
+
+    <div>
+        <button class="play-again-btn" id="replayBtnFromHurray"> Play Again</button>
+     </div>
+     
+     <div class="rules" data-toggle="modal" data-target="#exampleModal">
+        Rules
+     </div>
+</Section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ </body>
+
+        
+
+</html>
