@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="time-container">
+        
+        <div id="ten-countdown"></div>
+   
+                MIN : <input placeholder="00" type="text" id="mins-input" ><br><br>
+                
+           
+                SEC : <input placeholder="00" type="text" id="secs-input" ><br><br>
+         
+                <button type="submit" onclick=start()>Start</button>
+    </div>
+
+
+
+        <script>
+
+      
+
+        // console.log(minInput);
+        // let min = minInput
+        // let sec = secInput
+        
+
+            function countdown( elementName, minutes, seconds )
+                    {
+                        var element, endTime, hours, mins, msLeft, time;
+
+                        function twoDigits( n )
+                        {
+                            return (n <= 9 ? "0" + n : n);
+                        }
+
+                        function updateTimer()
+                        {
+                            msLeft = endTime - (+new Date);
+                            if ( msLeft < 1000 ) {
+                                element.innerHTML = "Time is up!";
+                            } else {
+                                time = new Date( msLeft );
+                                hours = time.getUTCHours();
+                                mins = time.getUTCMinutes();
+                                element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+                                setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+                            }
+                        }
+
+                        element = document.getElementById( elementName );
+                        endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+                        updateTimer();
+                    }
+
+                    start =() =>{
+                        let min = document.getElementById('mins-input').value;
+                         let sec = document.getElementById('secs-input').value;
+                        console.log(min, sec);
+                        countdown( "ten-countdown", min, sec );
+                    }
+                  
+
+        </script>
+</body>
+
+</html>
