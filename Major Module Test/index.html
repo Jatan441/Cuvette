@@ -74,7 +74,7 @@
                 paper
              </div>
 
-             <div class="rules" data-toggle="modal" data-target="#exampleModal">
+             <div class="rules rules-button">
                 Rules
              </div>
              
@@ -91,9 +91,9 @@
 
         <div class="lost-buttons">
             
-            <div class="button button-border-yellow col-align">
+            <div class="button button-border-yellow col-align lostBtn1">
                 <div class="button-inside">
-                    <img src="paper.png" alt="">
+                    <img src="paper.png" alt="" class="lost-ins1">
                 </div>
              </div>
 
@@ -106,9 +106,9 @@
              <div class="btn-highlight-l1">
                 <div class="btn-highlight-l2">
                     <div class="btn-highlight-l3">
-                        <div class="button button-border-pink pos">
+                        <div class="button button-border-pink pos lostBtn2">
                             <div class="button-inside">
-                                <img src="scissor.png" alt="">
+                                <img src="scissor.png" alt="" class="lost-ins2">
                             </div>
                             </div>
                     </div>
@@ -116,9 +116,9 @@
            
             </div>
         </div>
-        <div class="rules" data-toggle="modal" data-target="#exampleModal">
-            Rules
-         </div>
+        <div class="rules rules-button">
+                        Rules
+                    </div>
     </div>
     <!-- Lost end------------------------------------------------------------------------------------------ -->
 
@@ -161,12 +161,12 @@
 
             
         </div>
-        <div class="rules" id="next">
+        <div class="next" id="next">
             Next
          </div>
-        <div class="rules" data-toggle="modal" data-target="#exampleModal">
-            Rules
-         </div>
+        <div class="rules rules-button">
+                        Rules
+                    </div>
     </div>
     <!-- Win end------------------------------------------------------------------------------------------ -->
 
@@ -202,11 +202,27 @@
                 
             </div>
             
-        <div class="rules" data-toggle="modal" data-target="#exampleModal">
-            Rules
-         </div>
+        <div class="rules rules-button">
+                        Rules
+                    </div>
     </div>
     <!-- Tie UP End------------------------------------------------------------------------ -->
+
+    
+    <div class="rules-card inactive">
+        <div class="ruless">
+            <h5>Game Rules</h5>
+            <ul class="ruless-list">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.</li>
+                <li> Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>    
+            </ul>
+        </div>
+        <div class="cross">
+            <img src="cross.png" alt="" width="20px" height="20px">
+        </div>
+    </div>
 
 </section>
 
@@ -214,16 +230,7 @@
 
     <div class="tropy-star">
 
-        <div class="star1">
-        <img src="Star.png"  alt="">
-        </div>
-        <div class="trophy">
-        <img src="tropy.png" alt="">
-        </div>
-
-        <div class="star2">
-            <img src="Star.png"  alt="">
-        </div>
+        <img src="hurray-img.png" alt="" class="hurray-img">
        
     </div>
 
@@ -236,31 +243,19 @@
         <button class="play-again-btn" id="replayBtnFromHurray"> Play Again</button>
      </div>
      
-     <div class="rules" data-toggle="modal" data-target="#exampleModal">
+     <div class="rules reset">
+        Reset
+     </div>
+     
+     <div class="rules rules-button">
         Rules
      </div>
+
+     
+
+
 </Section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

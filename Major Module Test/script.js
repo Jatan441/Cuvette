@@ -31,23 +31,29 @@
         hurray.style.display = 'none'
 
 
-
-  
+        
 
         const replay_tie  = document.querySelector('#replayBtnFromTie');
         const replay_lost  = document.querySelector('#replayBtnFromLost');
         const replay_win = document.querySelector('#replayBtnFromWin');
         const replay_hurray  = document.querySelector('#replayBtnFromHurray');
 
-        const rockIcon = document.querySelector('#rockIcon');
-        const paperIcon = document.querySelector('#paperIcon');
-        const scissorIcon = document.querySelector('#scissorIcon');
-
         const rockBtn = document.querySelector('.rock');
         const paperBtn = document.querySelector('.paper');
         const scissorBtn = document.querySelector('.scissor');
         const next = document.querySelector('#next');
-        
+
+        const reset = document.querySelector('.reset');
+
+
+        reset.addEventListener('click',()=>{
+          
+            localStorage.setItem( 'playerScore' , 0);
+            localStorage.setItem( 'computerScore' , 0);
+            computerScoreBoard.innerText = 0;
+            playerScoreBoard.innerText = 0;
+            playGame();
+        } );
 
         const playGame = () => {
             fullGame.style.display = 'block';
@@ -57,9 +63,19 @@
             win_sec.style.display = 'none'; 
             hurray.style.display = 'none'
 
-            // const rockBtn = document.querySelector('.rock');
-            // const paperBtn = document.querySelector('.paper');
-            // const scissorBtn = document.querySelector('.scissor');
+            let rulesOpenBtn = document.querySelector('.rules-button')
+            let rulesCard = document.querySelectorAll('.rules-card')[0]
+            let rulesCloseBtn = document.querySelectorAll('.cross')[0]
+            
+            rulesOpenBtn.addEventListener('click', ()=>{
+                rulesCard.classList.remove('inactive')
+            })
+            
+            // for closing the rules book, when i click 'X' button
+            rulesCloseBtn.addEventListener('click', ()=>{
+                rulesCard.classList.add('inactive')
+            })
+
             const playerOptions = [rockBtn,paperBtn,scissorBtn];
             const computerOptions = ['rock','paper','scissor']
             
@@ -87,7 +103,7 @@
                 }
                 else if(player == 'rock'){
                     if(computer == 'paper'){
-                        lose();
+                        lose(player, computer);
             
                     }else{
                        win(player,computer);
@@ -95,14 +111,14 @@
                 }
                 else if(player == 'scissor'){
                     if(computer == 'rock'){
-                       lose();
+                        lose(player, computer);
                     }else{
                         win(player,computer);
                     }
                 }
                 else if(player == 'paper'){
                     if(computer == 'scissor'){
-                       lose();
+                        lose(player, computer);
                     }else{
                         win(player,computer);
                     }
@@ -110,9 +126,9 @@
         
         }
 
-
-
         const tie = (p) =>{
+
+
             const tieBtn1 = document.querySelector(".tieBtn1");
             const tieBtn2 = document.querySelector(".tieBtn2");
             if (p === "paper") {
@@ -171,11 +187,56 @@
             
         }
 
+        const lose = (p,c) =>{
 
-        
+            const lostBtn1 = document.querySelector(".lostBtn1");
+            const lostBtn2 = document.querySelector(".lostBtn2");
+            if (p === "paper") {
+    
+                lostBtn1.classList.remove('button-border-blue');
+                lostBtn1.classList.remove('button-border-pink');
+                lostBtn1.classList.add('button-border-yellow');
+                document.querySelector('.lost-ins1 ').innerHTML = '<img src="paper.png" alt="">'
+                
+               
+            }
+
+            if (c === "paper") {
+                lostBtn2.classList.remove('button-border-blue');
+                lostBtn2.classList.remove('button-border-pink');
+                lostBtn2.classList.add('button-border-yellow');
+                document.querySelector('.lost-ins2').innerHTML = '<img src="paper.png" alt="">'
+            }
+
+            if (p === "rock") {
+                lostBtn1.classList.remove('button-border-pink');
+                lostBtn1.classList.remove('button-border-yellow');
+                lostBtn1.classList.add('button-border-blue');
+                document.querySelector('.lost-ins1').innerHTML = '<img src="rock.png" alt="">'
+            }
+
+            if (c === "rock") {
+                lostBtn2.classList.remove('button-border-pink');
+                lostBtn2.classList.remove('button-border-yellow');
+                lostBtn2.classList.add('button-border-blue');
+                document.querySelector('.lost-ins2').innerHTML = '<img src="rock.png" alt="">'
+            }
 
 
-        const lose = () =>{
+            if (p === "scissor") {
+                lostBtn1.classList.remove('button-border-blue');
+                lostBtn1.classList.remove('button-border-yellow');
+                lostBtn1.classList.add('button-border-pink');
+                document.querySelector('.lost-ins1 ').innerHTML = '<img src="scissor.png" alt="">'
+
+            }
+
+            if (c === "scissor") {
+                lostBtn2.classList.remove('button-border-yellow');
+                lostBtn2.classList.remove('button-border-blue');
+                lostBtn2.classList.add('button-border-pink');
+                document.querySelector('.lost-ins2 ').innerHTML = '<img src="scissor.png" alt="">'
+            }
             localStorage.computerScore = computerScore++;
             computerScoreBoard.innerText = computerScore;
             localStorage.setItem('computerScore', computerScore===null? 0: computerScore);
@@ -199,41 +260,49 @@
                 winBtn1.classList.remove('button-border-blue');
                 winBtn1.classList.remove('button-border-pink');
                 winBtn1.classList.add('button-border-yellow');
+                document.querySelector('.win-ins1 ').innerHTML = '<img src="paper.png" alt="">'
                 
+               
+            }
+
+            if (c === "paper") {
                 winBtn2.classList.remove('button-border-blue');
                 winBtn2.classList.remove('button-border-pink');
                 winBtn2.classList.add('button-border-yellow');
-                // winBtn2.classList.add(`button-border-${}`);
-               
-                document.querySelector('.win-ins1 ').innerHTML = '<img src="paper.png" alt="">'
-                document.querySelector('.win-ins2 ').innerHTML = '<img src="paper.png" alt="">'
-               
+                document.querySelector('.win-ins2').innerHTML = '<img src="paper.png" alt="">'
             }
+
             if (p === "rock") {
                 winBtn1.classList.remove('button-border-pink');
                 winBtn1.classList.remove('button-border-yellow');
                 winBtn1.classList.add('button-border-blue');
-                
+                document.querySelector('.win-ins1').innerHTML = '<img src="rock.png" alt="">'
+            }
+
+            if (c === "rock") {
                 winBtn2.classList.remove('button-border-pink');
                 winBtn2.classList.remove('button-border-yellow');
                 winBtn2.classList.add('button-border-blue');
-
-                document.querySelector('.win-ins1 ').innerHTML = '<img src="rock.png" alt="">'
-                document.querySelector('.win-ins2 ').innerHTML = '<img src="rock.png" alt="">'
-                
+                document.querySelector('.win-ins2').innerHTML = '<img src="rock.png" alt="">'
             }
+
+
             if (p === "scissor") {
                 winBtn1.classList.remove('button-border-blue');
                 winBtn1.classList.remove('button-border-yellow');
                 winBtn1.classList.add('button-border-pink');
+                document.querySelector('.win-ins1 ').innerHTML = '<img src="scissor.png" alt="">'
 
+            }
+
+            if (c === "scissor") {
                 winBtn2.classList.remove('button-border-yellow');
                 winBtn2.classList.remove('button-border-blue');
                 winBtn2.classList.add('button-border-pink');
-                document.querySelector('.win-ins1 ').innerHTML = '<img src="scissor.png" alt="">'
                 document.querySelector('.win-ins2 ').innerHTML = '<img src="scissor.png" alt="">'
             }
           
+
             localStorage.playerScore =playerScore++;
             localStorage.setItem( 'playerScore' , playerScore===null ? 0: playerScore );
             playerScoreBoard.innerText = playerScore;
@@ -255,17 +324,11 @@
                 fullGame.style.display = 'none';
 
                 replay_hurray.addEventListener("click", ()=>{
-                    console.log("Hello");
                     playGame();
                 })
         }
 
-
-      
-
-      
         playGame();
 }    
         
-   
         game();
