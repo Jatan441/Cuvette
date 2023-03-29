@@ -50,8 +50,10 @@
           
             localStorage.setItem( 'playerScore' , 0);
             localStorage.setItem( 'computerScore' , 0);
-            computerScoreBoard.innerText = 0;
-            playerScoreBoard.innerText = 0;
+            playerScore = 0;
+            computerScore = 0;
+            computerScoreBoard.innerText = computerScore;
+            playerScoreBoard.innerText = playerScore;
             playGame();
         } );
 
