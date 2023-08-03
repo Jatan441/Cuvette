@@ -1,0 +1,483 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.containerr{
+    background-color: #89C15E;
+    width: 100%;
+    height: 100%;
+    padding-top:62px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/* <!-- Score------------------------------------------------------------------------ --> */
+.score-section{
+    margin-top: 62px;
+    width: 60%;
+    height: 158px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #FFFFFF;
+    border-radius: 13px;
+}
+
+.score-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+ .score-sec-text{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 135px;
+    height: 37px;
+    left: 258px;
+    top: 78px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 47px;
+    letter-spacing: 0.1em;
+
+color: #FFFFFF;   
+}
+
+.score-box{
+    display: flex;
+    justify-content: space-between;
+     
+}
+
+.score{
+
+   
+    width: 139px;
+    height: 128px;
+    margin: 10px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    text-align: center;
+    padding-top: 10px;
+
+   
+}
+ .text-score{
+ 
+    height: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    font-variant-caps: all-petite-caps;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #656565;
+   
+}
+
+.num-score{
+   
+    height: 63px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 80px;
+    color: #252525;
+    margin-top: -20px;
+}
+.computer-score{
+
+    width: 139px;
+    height: 128px;
+    margin: 10px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    padding-top: 10px;
+    text-align: center;
+    }
+
+
+    /* <!-- Home------------------------------------------------------------------------ --> */
+
+
+    .button-border-pink{
+        border: 16px solid #BD00FF;
+    }
+    .button-border-yellow{
+        border: 16px solid #FFA943;
+    }
+    .button-border-blue{
+        border: 16px solid #0074B6;
+    }
+
+    .button{
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .button-inside{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 3px;
+    }
+
+    .lines{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        height: 110px;    
+        margin-top: -25px;
+
+    }
+
+    .align-buttons{
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .straight-line{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-left:-1px ;
+        margin-right:-1px ;
+    }
+
+    .center{
+        margin-left:auto ;
+        margin-right:auto ;
+        margin-top: -15px;
+    }
+
+    .rules{
+
+
+        /* position: absolute; */
+        float: right;
+        box-sizing: border-box;
+        margin-right: 30px;
+        width: 100px;
+        height: 40px;
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+        font-variant-caps: all-petite-caps;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+        padding: 5px;
+        color: #FFFFFF;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .next{
+
+
+        /* position: absolute; */
+        float: right;
+        box-sizing: border-box;
+        margin-right: 30px;
+        width: 100px;
+        height: 40px;
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+        font-variant-caps: all-petite-caps;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+        padding: 5px;
+        color: #FFFFFF;
+        text-align: center;
+        cursor: pointer;
+    }
+
+
+    /* <!-- Lost------------------------------------------------------------------------ --> */
+
+    .picked{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        height: 16px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        font-variant-caps: all-petite-caps;
+        gap: 100px;
+        color: #FFFFFF;
+    }
+
+    .lost-buttons{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        margin-bottom: 54px;
+    }
+
+    #you-lost{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 39px;
+        line-height: 46px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-variant-caps: all-petite-caps;
+         color: #FFFFFF;
+    }
+
+    #against-pc{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-variant-caps: all-petite-caps;
+        color: #FFFFFF;
+    }
+
+    .play-again-btn{
+        width: 174px;
+        height: 44px;
+        font-variant-caps: all-petite-caps;
+        background: #FFFFFF;
+        border-radius: 9px;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.1em;
+        color: #6B6B6B;
+        cursor: pointer;
+    }
+
+    .btn-highlight-l1{
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(46, 154, 37, 0.39);
+        box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+    }
+
+    .btn-highlight-l2{
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgba(29, 168, 43, 0.79);
+        margin: 20px;
+    }
+
+    .btn-highlight-l3{
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: #3B6720;
+        filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+        margin: 20px;
+
+    }
+
+    .pos{
+        margin: 15px;
+    }
+
+    .col-align{
+      margin-top:50px ;
+      margin-left:60px ;
+    }
+
+    /* <!-- Tie UP------------------------------------------------------------------------ --> */
+    .tie-buttons{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 80px;
+        padding-left:20px;
+        padding-right:20px;
+        margin-bottom: 114px;
+    }
+
+  /* <!-- Win------------------------------------------------------------------------ --> */
+    .col-align-win{
+        margin-top:50px ;
+        margin-right:60px ;
+        margin-bottom: 54px;
+      }
+
+      
+  /* <!-- Hurray------------------------------------------------------------------------ --> */
+
+.hurray-img{
+    height: 300px;
+    
+    margin-top: 50px;
+}
+
+  .hurray{
+    text-align: center;
+    top: 100px;
+  }
+
+
+  .hurray-txt{
+        height: 86px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 91px;
+        line-height: 107px;
+        letter-spacing: 0.1em;
+        font-variant-caps: all-petite-caps;
+        color: #FFFFFF;
+
+
+  }
+
+
+
+  .won-game{
+    height: 48px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 41px;
+    line-height: 48px;
+   
+    letter-spacing: 0.1em;
+    font-variant-caps: all-petite-caps;
+    color: #FFFFFF;
+  }
+
+
+  .star1{
+    width: 130px;
+    height: 130px;
+  }
+
+  .star2{
+   
+    width: 32px;
+    height: 32px;
+  }
+  .trophy{
+   
+    height: 200px;
+  
+    border: 1px solid black;
+  }
+
+
+
+
+  /* Rules */
+
+  .rules-card{
+    /* float: right; */
+    position: fixed;
+    background-color: #004429;
+    color: white;
+    padding: 10px;
+    width: 250px;
+    /* height: 45%; */
+
+    height: 320px;
+    right: 30px;
+    bottom: 70px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px;
+    margin-bottom: 10px;
+}
+
+ .ruless{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ruless h3 {
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 34px;
+}
+.ruless-list{
+    list-style: none;
+    
+}
+li { 
+    margin: 10px 0;
+    position: relative; 
+    list-style: none; 
+    display: inline-block; 
+    margin-left: 30px;
+    }
+li:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    background: yellow;
+} 
+
+.cross{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -25px;
+    top: -25px;
+    border: 5px solid #FFFFFF;
+    background-color:red ;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    /* background-image: url('download.png'); */
+}
+.cross img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.inactive{
+    display: none;
+}
