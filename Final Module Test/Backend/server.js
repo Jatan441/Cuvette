@@ -10,7 +10,13 @@ const multer = require("multer");
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin : ["http://localhost:5173/"],
+    methods : ["POST", "GET"],
+    credentials : true
+  }
+));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -95,7 +101,7 @@ app.get('/health', (req, res)=>{
     if(mongoose.connection.readyState==1)
     res.json({
         Server: 'IS RUNNING ON THE DESIGNATED PORT',
-        Database: 'Connection is succesful'
+        Database: 'Connection is succesfull'
     })
     else 
     res.json({
