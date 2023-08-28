@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import "./Form.css";
 import { SwipToryContext } from "../../../SwipToryContext";
 import { useNavigate } from "react-router-dom";
+import './Form.css'
 
 export default function Form(props) {
   const [formData, setFormData] = useState({});
@@ -12,14 +12,22 @@ export default function Form(props) {
   const handleSubmit = async (e, formData) => {
     e.preventDefault();
     if(props.isSignUp) {
-      const response = await axios.post("http://localhost:3000/register", formData)
+      const response = await axios.post("https://swiptory.onrender.com/register", formData, {
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+        },
+      })
       if(response.data.error)
       setResponse(response.data.error)
       else
       setResponse(`${response.data.Success}. User successfully created.`);
     }
     if(props.isLogIn) {
-      const response = await axios.post("http://localhost:3000/login",formData)
+      const response = await axios.post("https://swiptory.onrender.com/login", formData, {
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+        },
+      })
       if(response.data.error)
       setResponse(`${response.data.error}. Incorrect username or password.`)
       else {
@@ -43,7 +51,7 @@ function signUp(formData, setFormData, handleSubmit, response) {
   return (
     <>
       <form
-        action="http://localhost:3000/register"
+        action="https://swiptory.onrender.com/register"
         method="POST"
         onChange={(e) =>
           setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -84,7 +92,7 @@ function logIn(formData, setFormData, handleSubmit, response) {
   return (
     <>
       <form
-        action="http://localhost:3000/login"
+        action="https://swiptory.onrender.com/login"
         method="post"
         onChange={(e) =>
           setFormData({ ...formData, [e.target.name]: e.target.value })
