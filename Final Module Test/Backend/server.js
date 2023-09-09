@@ -10,13 +10,7 @@ const multer = require("multer");
 
 const app = express();
 
-app.use(cors(
-  {
-    origin : ["http://localhost:5173/"],
-    methods : ["POST", "GET"],
-    credentials : true
-  }
-));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
