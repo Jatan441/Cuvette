@@ -45,7 +45,7 @@ export default function StoriesSection(props) {
     (async () => {
       const user = localStorage.getItem("user");
       let stories = await axios.get(
-        `https://swiptory.onrender.com/user/story/${user}`
+        `https://backend-73bf.onrender.com/user/story/${user}`
       );
       stories = stories.data;
       setUserStories(stories);
@@ -130,10 +130,10 @@ async function getSelectedStories(category) {
   try {
     let response;
     if (category == "all")
-      response = await axios.get("https://swiptory.onrender.com/story/all");
+      response = await axios.get("https://backend-73bf.onrender.com/story/all");
     else
       response = await axios.get(
-        `https://swiptory.onrender.com/story/all?category=${category}`
+        `https://backend-73bf.onrender.com/story/all?category=${category}`
       );
     return response.data;
   } catch (e) {
@@ -359,7 +359,7 @@ function showBookmarkedStories(bookmarkedStories, setInfinitySlide, setEditStory
 async function getBookMarkedStories () {
   const user = localStorage.getItem('user');
   try {
-    let bookmarks = await axios.get(`https://swiptory.onrender.com/user/bookmarks/${user}`, {
+    let bookmarks = await axios.get(`https://backend-73bf.onrender.com/user/bookmarks/${user}`, {
       headers: {
         "content-type": "application/x-www-form-urlencoded",
         token: localStorage.getItem("token"),
@@ -371,7 +371,7 @@ async function getBookMarkedStories () {
     for (const item of bookmarks) {
       const storyID = Number(item);
       try {
-        const response = await axios.get(`https://swiptory.onrender.com/story/${storyID}`);
+        const response = await axios.get(`https://backend-73bf.onrender.com/story/${storyID}`);
         stories.push(...response.data);
       } catch (e) {
         console.log(e);

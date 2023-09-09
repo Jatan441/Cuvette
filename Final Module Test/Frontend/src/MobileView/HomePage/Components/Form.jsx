@@ -12,7 +12,7 @@ export default function Form(props) {
   const handleSubmit = async (e, formData) => {
     e.preventDefault();
     if(props.isSignUp) {
-      const response = await axios.post("https://swiptory.onrender.com/register", formData, {
+      const response = await axios.post("https://backend-73bf.onrender.com/register", formData, {
         headers: {
           "content-type": "application/x-www-form-urlencoded",
         },
@@ -23,7 +23,7 @@ export default function Form(props) {
       setResponse(`${response.data.Success}. User successfully created.`);
     }
     if(props.isLogIn) {
-      const response = await axios.post("https://swiptory.onrender.com/login", formData, {
+      const response = await axios.post("https://backend-73bf.onrender.com/login", formData, {
         headers: {
           "content-type": "application/x-www-form-urlencoded",
         },
@@ -51,7 +51,7 @@ function signUp(formData, setFormData, handleSubmit, response) {
   return (
     <>
       <form
-        action="https://swiptory.onrender.com/register"
+        action="https://backend-73bf.onrender.com/register"
         method="POST"
         onChange={(e) =>
           setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -92,7 +92,7 @@ function logIn(formData, setFormData, handleSubmit, response) {
   return (
     <>
       <form
-        action="https://swiptory.onrender.com/login"
+        action="https://backend-73bf.onrender.com/login"
         method="post"
         onChange={(e) =>
           setFormData({ ...formData, [e.target.name]: e.target.value })

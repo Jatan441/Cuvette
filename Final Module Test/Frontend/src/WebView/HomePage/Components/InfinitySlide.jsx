@@ -213,7 +213,7 @@ export default function InfinitySlide(props) {
 async function fetchStoryByID(storyID) {
   try {
     const response = await axios.get(
-      `https://swiptory.onrender.com/story/${storyID}`
+      `https://backend-73bf.onrender.com/story/${storyID}`
     );
     if (!response.data.Error) return response.data.reverse();
   } catch (e) {
@@ -228,7 +228,7 @@ async function setBookmark(storyID, setBookmarkChng) {
       storyID: storyID,
     };
     const response = await axios.post(
-      "https://swiptory.onrender.com/bookmark",
+      "https://backend-73bf.onrender.com/bookmark",
       payload,
       {
         headers: {
@@ -254,7 +254,7 @@ async function isBookmarked(storyID, setBookmarkChng) {
   try {
     const username = localStorage.getItem("user");
     const response = await axios.get(
-      `https://swiptory.onrender.com/bookmark/${username}?storyID=${storyID}`,
+      `https://backend-73bf.onrender.com/bookmark/${username}?storyID=${storyID}`,
       {
         headers: {
           "content-type": "application/x-www-form-urlencoded",
@@ -277,7 +277,7 @@ async function setLike(storyID, iteration, setLikeChng) {
       iteration,
     };
     const response = await axios.post(
-      "https://swiptory.onrender.com/like",
+      "https://backend-73bf.onrender.com/like",
       payload,
       {
         headers: {
@@ -301,7 +301,7 @@ async function isLiked(storyID, iteration, setLikeChng) {
   try {
     const user = localStorage.getItem("user");
     const response = await axios.get(
-      `https://swiptory.onrender.com/like/${storyID}?iteration=${iteration}&username=${user}`,
+      `https://backend-73bf.onrender.com/like/${storyID}?iteration=${iteration}&username=${user}`,
       {
         headers: {
           "content-type": "application/x-www-form-urlencoded",
@@ -320,7 +320,7 @@ async function isLiked(storyID, iteration, setLikeChng) {
 async function removeLike(storyID, iteration, setLikeChng) {
   try {
     const response = await axios.put(
-      "https://swiptory.onrender.com/like",
+      "https://backend-73bf.onrender.com/like",
       {
         storyID,
         iteration,
@@ -344,7 +344,7 @@ async function removeLike(storyID, iteration, setLikeChng) {
 async function removeBookmark(storyID, setBookmarkChng) {
   try {
     const response = await axios.put(
-      "https://swiptory.onrender.com/bookmark",
+      "https://backend-73bf.onrender.com/bookmark",
       {
         username: localStorage.getItem("user"),
         storyID: storyID,

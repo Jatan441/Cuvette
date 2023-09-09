@@ -44,7 +44,7 @@ export default function EditStory(props) {
       item["createdByUser"] = localStorage.getItem("user");
       try {
         const response = await axios.delete(
-          `https://swiptory.onrender.com/story/${storyID}`,
+          `https://backend-73bf.onrender.com/story/${storyID}`,
           {
             headers: {
               "content-type": "application/x-www-form-urlencoded",
@@ -56,7 +56,7 @@ export default function EditStory(props) {
           try {
             setTimeout(async () => {
               const response = await axios.post(
-                "https://swiptory.onrender.com/story",
+                "https://backend-73bf.onrender.com/story",
                 item,
                 {
                   headers: {
@@ -213,7 +213,7 @@ export default function EditStory(props) {
 
 async function getStoryID() {
   try {
-    let id = await axios.get("https://swiptory.onrender.com/storyid");
+    let id = await axios.get("https://backend-73bf.onrender.com/storyid");
     return id.data.storyID;
   } catch (e) {
     console.log(e);
